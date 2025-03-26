@@ -12,13 +12,48 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HomeScreen"
+            android:text="Welcome to MyRO!!"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.736" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="239dp"
+            android:layout_height="119dp"
+            android:layout_marginTop="230dp"
+            android:backgroundTint="#880E0E"
+            android:text="SEARCH FOR A ROOM"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/basic_icon"
+            app:iconTint="#040000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="#250202" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="241dp"
+            android:layout_height="116dp"
+            android:backgroundTint="#9F0F0F"
+            android:text="PUT YOUR PROPERTY"
+            app:cornerRadius="25dp"
+            app:icon="@drawable/advance_icon"
+            app:iconTint="#040000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/button3"
+            app:layout_constraintVertical_bias="0.096"
+            app:rippleColor="#270606"
+            app:strokeColor="#0E0101" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

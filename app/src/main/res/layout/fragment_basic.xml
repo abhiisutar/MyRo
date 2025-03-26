@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.BasicFragment">
+    android:fillViewport="true">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
+  <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="match_parent">
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_landlord_room_info"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Noob"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@android:color/holo_blue_light"
+        android:padding="67dp"
+        android:text="Landlord &amp; Room Information"
+        app:cornerRadius="35dp"
+        app:icon="@drawable/home_icon" />
 
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
 
-</FrameLayout>
+  </LinearLayout>
+</ScrollView>
