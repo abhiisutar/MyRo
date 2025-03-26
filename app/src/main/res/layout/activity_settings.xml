@@ -41,145 +41,32 @@
                 android:id="@+id/backBtn"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
                 android:backgroundTint="#0961f5"
                 android:drawableTop="@drawable/back_icon"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/aiParametersLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/ai_parameters"
-        android:textSize="18sp"
-        android:layout_marginTop="18dp"
-        android:layout_marginStart="16dp"
-        android:textStyle="bold"
-        android:textColor="#000000"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
-        app:layout_constraintStart_toStartOf="parent"
-         />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <!-- Creativity Label -->
-    <TextView
-        android:id="@+id/creativityLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/creativity"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/aiParametersLabel"
-        app:layout_constraintTop_toBottomOf="@id/aiParametersLabel" />
-
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="@string/_1"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/creativitySeekBar"
-        app:layout_constraintEnd_toStartOf="@+id/creativitySeekBar"
-        app:layout_constraintTop_toTopOf="@+id/creativitySeekBar" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_10"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/creativitySeekBar"
-        app:layout_constraintStart_toEndOf="@+id/creativitySeekBar"
-        app:layout_constraintTop_toTopOf="@+id/creativitySeekBar" />
-
-    <!-- Creativity SeekBar -->
-    <SeekBar
-        android:id="@+id/creativitySeekBar"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:max="10"
-        android:progress="5"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edittext"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/creativityLabel" />
-
-    <!-- Brief / Detailed Label -->
-    <TextView
-        android:id="@+id/briefDetailedLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/brief_detailed"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/creativityLabel"
-        app:layout_constraintTop_toBottomOf="@id/creativitySeekBar" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <!-- Brief / Detailed SeekBar -->
-    <SeekBar
-        android:id="@+id/detailSeekBar"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:max="10"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rounded_edittext"
-        android:progress="5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/briefDetailedLabel" />
-
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="@string/_1"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/detailSeekBar"
-        app:layout_constraintEnd_toStartOf="@+id/detailSeekBar"
-        app:layout_constraintTop_toTopOf="@+id/detailSeekBar" />
-
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_10"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/detailSeekBar"
-        app:layout_constraintStart_toEndOf="@+id/detailSeekBar"
-        app:layout_constraintTop_toTopOf="@+id/detailSeekBar" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/saveChangesBtn"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:clickable="true"
-        android:elevation="12dp"
-        android:focusable="true"
-        android:textAllCaps="false"
-        android:layout_marginTop="32dp"
-        android:text="@string/save_changes"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailSeekBar"
-        app:layout_constraintWidth_percent="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

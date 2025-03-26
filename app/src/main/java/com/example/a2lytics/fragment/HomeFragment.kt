@@ -43,43 +43,33 @@ class HomeFragment : Fragment() {
         // Get Current User ID
         val currentUserId = auth.currentUser?.uid
 
-        if (currentUserId != null) {
-            // Fetch user name from Firebase
-            database.child("user").child(currentUserId).child("userName")
-                .addListenerForSingleValueEvent(object : ValueEventListener {
-                    override fun onDataChange(snapshot: DataSnapshot) {
-                        val userName = snapshot.value?.toString()
-                        if (userName != null) {
-                            // Update TextView with the user's name
-                            binding.userName.text = "Hi, $userName"
-                        } else {
-                            binding.userName.text = "Hi, User"
-                        }
-                    }
-
-                    override fun onCancelled(error: DatabaseError) {
-                        Toast.makeText(context, "Failed to fetch user data: ${error.message}", Toast.LENGTH_SHORT).show()
-                    }
-                })
-        } else {
-            binding.userName.text = "Hi"
-        }
-
-        // Set up startLearningBtn click listener
-        binding.startLearningBtn.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_basicFragment)
-        }
-
-
+//        if (currentUserId != null) {
+//            // Fetch user name from Firebase
+//            database.child("user").child(currentUserId).child("userName")
+//                .addListenerForSingleValueEvent(object : ValueEventListener {
+//                    override fun onDataChange(snapshot: DataSnapshot) {
+//                        val userName = snapshot.value?.toString()
+//                        if (userName != null) {
+//                            // Update TextView with the user's name
+//                            binding.userName.text = "Hi, $userName"
+//                        } else {
+//                            binding.userName.text = "Hi, User"
+//                        }
+//                    }
+//
+//                    override fun onCancelled(error: DatabaseError) {
+//                        Toast.makeText(
+//                            context,
+//                            "Failed to fetch user data: ${error.message}",
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                    }
+//                })
+//        } else {
+//            binding.userName.text = "Hi"
+//        }
+//
 
         // Set up ImageSlider
-        val imageList = ArrayList<SlideModel>()
-        imageList.add(SlideModel(R.drawable.a2_pic1, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.a2_pic2, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.a2_pic3, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.a2_pic4, ScaleTypes.FIT))
-
-        val imageSlider = binding.imageSlider
-        imageSlider.setImageList(imageList, ScaleTypes.FIT)
     }
 }

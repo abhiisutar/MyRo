@@ -22,47 +22,21 @@
         android:name="com.example.a2lytics.fragment.AdvanceFragment"
         android:label="fragment_advance"
         tools:layout="@layout/fragment_advance" >
-        <action
-            android:id="@+id/action_advanceFragment_to_voiceInputFragment2"
-            app:destination="@id/voiceInputFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/proFragment"
         android:name="com.example.a2lytics.fragment.ProFragment"
         android:label="fragment_pro"
-        tools:layout="@layout/fragment_pro" >
-        <action
-            android:id="@+id/action_proFragment_to_voiceInputProFragment"
-            app:destination="@id/voiceInputProFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_pro" />
 
-    <fragment
-        android:id="@+id/voiceInputFragment"
-        android:name="com.example.a2lytics.fragment.VoiceInputFragment"
-        android:label="fragment_voice_input"
-        tools:layout="@layout/fragment_voice_input" >
-        <action
-            android:id="@+id/action_voiceInputFragment_to_advanceFragment"
-            app:destination="@id/advanceFragment" />
-    </fragment>
+
 
     <action
         android:id="@+id/action_homeFragment_to_basicFragment"
         app:destination="@id/basicFragment" />
 
 
-    <action
-        android:id="@+id/action_advanceFragment_to_voiceInputFragment"
-        app:destination="@id/voiceInputFragment" />
-    <fragment
-        android:id="@+id/voiceInputProFragment"
-        android:name="com.example.a2lytics.fragment.VoiceInputProFragment"
-        android:label="fragment_voice_input_pro"
-        tools:layout="@layout/fragment_voice_input_pro" >
-        <action
-            android:id="@+id/action_voiceInputProFragment_to_proFragment"
-            app:destination="@id/proFragment" />
-    </fragment>
+
 
 </navigation>

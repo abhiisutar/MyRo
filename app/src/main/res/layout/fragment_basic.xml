@@ -7,122 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".fragment.BasicFragment">
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-    >
-
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="16dp"
-    >
+      android:layout_height="match_parent">
 
-    <!-- Prompt Label -->
     <TextView
-        android:id="@+id/promptLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prompt"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
+        android:text="Noob"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Prompt EditText -->
-    <EditText
-        android:id="@+id/promptEditText_basic"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="8dp"
-        android:autofillHints="prompt"
-        android:background="@drawable/rounded_edittext"
-        android:gravity="top|start"
-        android:hint="@string/enter_your_prompt"
-        android:inputType="textMultiLine"
-        android:maxLines="1000"
-        android:padding="12dp"
-        android:textColor="#000000"
-        android:textColorHint="#595959"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/promptLabel"
-        app:layout_constraintWidth_percent="1.0" />
 
-    <!-- Submit Button -->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/submitButton"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_button"
-        android:clickable="true"
-        android:elevation="12dp"
-        android:focusable="true"
-        android:text="@string/submit"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/promptEditText_basic"
-        app:layout_constraintWidth_percent="1.0" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Response Label -->
-    <TextView
-        android:id="@+id/responseLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/response"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/submitButton" />
-
-    <!-- Response EditText -->
-    <EditText
-        android:autofillHints="response"
-        android:id="@+id/responseEditText_basic"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_edittext"
-        android:editable="false"
-        android:gravity="top|start"
-        android:hint="@string/response_will_appear_here"
-        android:inputType="textMultiLine"
-        android:maxLines="10000"
-        android:padding="12dp"
-        android:textColor="#000000"
-        android:textColorHint="#595959"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/responseLabel"
-        app:layout_constraintWidth_percent="1.0"
-        tools:ignore="Deprecated" />
-
-    <!-- Clear Button -->
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/clearButton"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/rounded_button"
-        android:clickable="true"
-        android:elevation="12dp"
-        android:focusable="true"
-        android:text="@string/clear"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/responseEditText_basic"
-        app:layout_constraintWidth_percent="1.0" />
-
-   </androidx.constraintlayout.widget.ConstraintLayout>
-
-  </ScrollView>
 </FrameLayout>

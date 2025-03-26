@@ -40,9 +40,7 @@ class AdvanceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.voiceButton.setOnClickListener {
-            findNavController().navigate(R.id.action_advanceFragment_to_voiceInputFragment)
-        }
+
     }
 
     companion object {

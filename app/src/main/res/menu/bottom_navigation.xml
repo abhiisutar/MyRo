@@ -8,17 +8,17 @@
 
     <item
         android:id="@+id/basicFragment"
-        android:title="@string/basic"
+        android:title="Noob"
         android:icon="@drawable/basic_icon"/>
 
     <item
         android:id="@+id/advanceFragment"
-        android:title="@string/advance"
+        android:title="Maha Noob"
         android:icon="@drawable/advance_icon"/>
     
     <item
         android:id="@+id/proFragment"
-        android:title="@string/pro"
+        android:title="Abhii"
         android:icon="@drawable/pro_icon" />
 
 </menu>

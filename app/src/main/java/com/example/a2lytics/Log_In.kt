@@ -27,7 +27,6 @@ class Log_In : AppCompatActivity() {
 
     private lateinit var email: String
     private lateinit var password: String
-
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
 

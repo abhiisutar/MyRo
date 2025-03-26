@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">A2</string>
+    <string name="app_name">MyRo</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="or">Or</string>
@@ -77,7 +77,7 @@
     <string name="_10">10</string>
     <string name="phone_no">Phone No.</string>
     <string name="default_web_client_id">873819220180-5117mocm14unbl6ijkls33h1hssqsf3o.apps.googleusercontent.com</string>
-    <string name="name_of_your_school">Name of your School</string>
+    <string name="name_of_your_college">Name of your College</string>
     <string name="name_of_your_education_board">Name of your Education Board</string>
     <string name="class_you_are_studying_in">Class you are studying in</string>
     <string name="save_changes">Save Changes</string>

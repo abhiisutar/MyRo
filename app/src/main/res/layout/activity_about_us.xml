@@ -78,7 +78,7 @@
             android:fontFamily="@font/adamina"
             android:paddingHorizontal="16dp"
             android:paddingVertical="8dp"
-            android:text="@string/a2_aboutus"
+            android:text="Abhhi is Noobest of noobs"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>

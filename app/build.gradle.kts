@@ -1,4 +1,4 @@
-import org.gradle.api.JavaVersion.VERSION_1_8
+
 import org.gradle.api.JavaVersion.VERSION_17
 import org.gradle.kotlin.dsl.libs
 

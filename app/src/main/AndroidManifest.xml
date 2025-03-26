@@ -8,11 +8,11 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/a2_logo"
+        android:icon="@drawable/myro_logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/a2_logo"
+        android:roundIcon="@drawable/myro_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.A2lytics"
+        android:theme="@style/Theme.MyRo"
         tools:targetApi="31">
         <activity
             android:name=".drawer.Settings"
@@ -44,9 +44,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Splash_Screen"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

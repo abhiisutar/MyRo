@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_signup_background"
+    android:background="@drawable/login_signup_background2"
     tools:context=".Log_In">
 
     <ImageView
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.22000003"
-        app:srcCompat="@drawable/a2_logo" />
+        app:srcCompat="@drawable/myro_logo" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -34,7 +34,7 @@
         android:layout_marginTop="12dp"
         android:fontFamily="@font/alata"
         android:text="@string/login_to_your_account"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,9 @@
         android:layout_marginTop="32dp"
         android:autofillHints="emailAddress"
         android:drawableStart="@drawable/mail_logo"
+        android:background="@drawable/rounded_edittext"
         android:drawablePadding="15dp"
+        android:padding="12dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -67,6 +69,8 @@
         android:drawableStart="@drawable/password_logo"
         android:drawablePadding="15dp"
         android:ems="10"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12.dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textColor="#000000"
@@ -95,7 +99,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/yeon_sung"
         android:text="@string/continue_with"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/textView5"
