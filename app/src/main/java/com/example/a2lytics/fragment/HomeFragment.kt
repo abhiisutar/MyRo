@@ -1,5 +1,6 @@
 package com.example.a2lytics.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -43,33 +44,12 @@ class HomeFragment : Fragment() {
         // Get Current User ID
         val currentUserId = auth.currentUser?.uid
 
-//        if (currentUserId != null) {
-//            // Fetch user name from Firebase
-//            database.child("user").child(currentUserId).child("userName")
-//                .addListenerForSingleValueEvent(object : ValueEventListener {
-//                    override fun onDataChange(snapshot: DataSnapshot) {
-//                        val userName = snapshot.value?.toString()
-//                        if (userName != null) {
-//                            // Update TextView with the user's name
-//                            binding.userName.text = "Hi, $userName"
-//                        } else {
-//                            binding.userName.text = "Hi, User"
-//                        }
-//                    }
-//
-//                    override fun onCancelled(error: DatabaseError) {
-//                        Toast.makeText(
-//                            context,
-//                            "Failed to fetch user data: ${error.message}",
-//                            Toast.LENGTH_SHORT
-//                        ).show()
-//                    }
-//                })
-//        } else {
-//            binding.userName.text = "Hi"
-//        }
-//
+        binding.searchRoomBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_basicFragment)
+        }
 
-        // Set up ImageSlider
+        binding.putPropertyBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_AdvanceFragment)
+        }
     }
 }

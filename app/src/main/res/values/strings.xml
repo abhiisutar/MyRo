@@ -86,4 +86,10 @@
     <string name="enter_name">Enter Name</string>
     <string name="enter_mobile_no">Enter Mobile No.</string>
     <string name="enter_email">Enter Email</string>
+
+    <string-array name="college_distances">
+        <item>College A - 2 km</item>
+        <item>College B - 3.5 km</item>
+        <item>College C - 5 km</item>
+    </string-array>
 </resources>
