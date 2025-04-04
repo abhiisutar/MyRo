@@ -21,7 +21,7 @@
             android:background="@drawable/bottom_navigation_bar_color"
             app:itemIconTint="@color/black"
             app:itemRippleColor="@color/white"
-            app:itemTextColor="@color/white"
+            app:itemTextColor="@color/black"
             app:labelVisibilityMode="labeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#0961f5">
+                android:background="#FFFFFF">
 
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -50,6 +50,7 @@
                     android:background="@drawable/round_button"
                     android:drawableTop="@drawable/humburger_button"
                     android:paddingTop="5dp"
+                    android:drawableTint="@color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/myro_logo"
                     app:layout_constraintStart_toStartOf="parent"
@@ -73,6 +74,7 @@
                     android:background="@drawable/round_button"
                     android:drawableTop="@drawable/notification_icon"
                     android:elevation="10dp"
+                    android:drawableTint="@color/black"
                     android:padding="7dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/whatsappIcon"
