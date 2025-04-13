@@ -128,7 +128,7 @@
 
         <!-- Book a Room Button -->
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/book_room_button"
+            android:id="@+id/putPropertyBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="PUT YOUR PROPERTY ON RENT"

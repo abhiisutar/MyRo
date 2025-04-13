@@ -5,9 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.a2lytics.R
+import com.example.a2lytics.data.PropertyDatabase
+import com.example.a2lytics.data.PropertyEntity
 import com.example.a2lytics.databinding.FragmentAdvanceBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 private const val ARG_PARAM1 = "param1"
@@ -37,19 +40,36 @@ class AdvanceFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.putPropertyBtn.setOnClickListener {
+            val propertyName = binding.propertyName.text.toString()
+            val propertyFor = binding.propertyFor.text.toString()
+            val numberOfRooms = binding.numberOfRooms.text.toString().toIntOrNull() ?: 0
+            val bedsPerRoom = binding.bedsPerRoom.text.toString().toIntOrNull() ?: 0
+            val roomRent = binding.roomRent.text.toString().toDoubleOrNull() ?: 0.0
+            val contactNumber = binding.contactNumber.text.toString()
+            val distanceFromDYPTC =
+                binding.distanceFromCollege.text.toString().toDoubleOrNull() ?: 0.0
+            val onlinePaymentNumber = binding.onlinePaymentNumber.text.toString()
 
-    }
+            val db = PropertyDatabase.getDatabase(requireContext())
+            val property = PropertyEntity(
+                propertyName = propertyName,
+                propertyFor = propertyFor,
+                numberOfRooms = numberOfRooms,
+                bedsPerRoom = bedsPerRoom,
+                roomRent = roomRent,
+                contactNumber = contactNumber,
+                distanceFromDYPTC = distanceFromDYPTC,
+                onlinePaymentNumber = onlinePaymentNumber
+            )
 
-    companion object {
-        fun newInstance(param1: String, param2: String) =
-            AdvanceFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+            CoroutineScope(Dispatchers.IO).launch {
+                db.propertyDao().insertProperty(property)
             }
+        }
     }
 }

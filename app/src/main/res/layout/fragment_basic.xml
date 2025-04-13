@@ -21,7 +21,11 @@
         app:cornerRadius="35dp"
         app:icon="@drawable/home_icon" />
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/propertyRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
 
   </LinearLayout>
 </ScrollView>
