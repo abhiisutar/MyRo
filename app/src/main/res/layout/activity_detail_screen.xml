@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="20dp"
+      >
+
+    <!-- Property Name Header -->
+    <TextView
+        android:id="@+id/tvPropertyName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Royal Residency"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:padding="12dp"
+        android:background="@color/brown"
+        android:fontFamily="sans-serif-condensed"/>
+
+    <!-- Edit Button (Initially Invisible) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:visibility="gone"
+        android:contentDescription="Edit Property"/>
+
+    <!-- Gender Icon with Decorative Container -->
+    <FrameLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/white">
+
+      <ImageView
+          android:id="@+id/ivGender"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:layout_gravity="center"
+          android:src="@drawable/smile" />
+    </FrameLayout>
+
+    <!-- Details Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bedsCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+       >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:background="@color/white"
+          android:padding="16dp">
+
+        <!-- Total Beds -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10dp">
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.5"
+              android:text="Total Beds:"
+              android:textSize="16sp"
+              android:textColor="#616161"
+              android:textStyle="bold"/>
+
+          <TextView
+              android:id="@+id/tvTotalBeds"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="12"
+              android:textSize="16sp"
+              android:textColor="#2E3B4E"
+              android:textAlignment="textEnd"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"/>
+
+        <!-- Available Beds -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10px">
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.5"
+              android:text="Available Beds:"
+              android:textSize="16sp"
+              android:textColor="#616161"
+              android:textStyle="bold"/>
+
+          <TextView
+              android:id="@+id/tvAvailableBeds"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="3"
+              android:textSize="16sp"
+              android:textColor="#E91E63"
+              android:textAlignment="textEnd"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"/>
+
+        <!-- Rent per Bed -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="10px">
+
+          <TextView
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1.5"
+              android:text="Rent per Bed:"
+              android:textSize="16sp"
+              android:textColor="#616161"
+              android:textStyle="bold"/>
+
+          <TextView
+              android:id="@+id/tvRent"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"
+              android:text="₹5,500/month"
+              android:textSize="16sp"
+              android:textColor="#009688"
+              android:textAlignment="textEnd"/>
+        </LinearLayout>
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Contact Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        android:background="@color/white"
+        app:cardElevation="4dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:padding="16dp"
+          android:background="@color/white"
+          android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/owner2"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Owner:"
+            android:textSize="16sp"
+            android:textColor="#616161"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+91 98765 43210"
+            android:textSize="16sp"
+            android:textColor="#2196F3"
+            android:textStyle="bold"/>
+
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- GPay Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:padding="16dp"
+          android:background="@color/white"
+          android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/upi"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPay/UPI:"
+            android:textSize="16sp"
+            android:textColor="#616161"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvGpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="owner123@oksbi"
+            android:textSize="16sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"/>
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Distance Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        >
+
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp"
+          android:gravity="start">
+
+      <ImageView
+          android:layout_width="70dp"
+          android:layout_height="84dp"
+          android:src="@drawable/dyp"
+          />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="26dp"
+          android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance from DYPTC"
+            android:textColor="#616161"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1.5 km"
+            android:textSize="24sp"
+            android:textColor="#FF5722"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Soul Society"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+      </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+  </LinearLayout>
+</ScrollView>

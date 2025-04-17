@@ -3,115 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@android:color/white"
-    >
+    android:background="@color/white"
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:orientation="vertical">
 
-        <!-- Property Name -->
-        <com.google.android.material.textfield.TextInputLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Property Name"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/property_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
+            android:text="Update Property"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
 
-        <!-- Property is for (Boys/Girls) -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Property is for (Boys/Girls)"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/property_for"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="text"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Number of Rooms -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Number of Rooms"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/number_of_rooms"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Number of Beds per Room -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Available beds"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/beds_per_room"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Room Rent -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Room Rent (₹)"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/room_rent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Contact Number -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Contact Number"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/contact_number"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="phone"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Distance from DYPTC -->
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Distance from DYPTC (km)"
-            android:layout_marginBottom="16dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/distance_from_college"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:padding="12dp"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- Online Payment Number -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,15 +27,12 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/onlinePaymentNumber"
+                android:id="@+id/propertyNameEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Online Payment Number"
-                android:inputType="phone"
-                android:padding="12dp"/>
+                android:hint="Property Name"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Owner's Address -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,7 +40,103 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ownerAddress"
+                android:id="@+id/propertyForEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Property For (boy/girl)"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/numberOfRoomsEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Rooms"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/bedsPerRoomEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Beds per Room"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/roomRentEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Room Rent"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/contactNumberEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact Number"
+                android:inputType="phone"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/distanceFromCollegeEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Distance from DYPTC (km)"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/onlinePaymentNumberEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Online Payment Number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ownerAddressEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Owner's Address"
@@ -143,19 +144,12 @@
                 android:minLines="2"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Book a Room Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/putPropertyBtn"
+        <Button
+            android:id="@+id/updatePropertyBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SAVE AND SUBMIT"
-            android:textSize="16sp"
-            android:layout_marginTop="20dp"
-            android:padding="12dp"
-            app:cornerRadius="8dp"
-            app:backgroundTint="@color/colorAccent"
-            android:textColor="@android:color/white" />
+            android:text="Update Property"
+            android:padding="16dp"/>
 
     </LinearLayout>
-
 </ScrollView>

@@ -5,7 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "rental_properties")
 data class PropertyEntity(
-    @PrimaryKey(autoGenerate = true) val id: Int = 0,
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
     val propertyName: String,
     val propertyFor: String,
     val numberOfRooms: Int,
@@ -13,5 +14,6 @@ data class PropertyEntity(
     val roomRent: Double,
     val contactNumber: String,
     val distanceFromDYPTC: Double,
-    val onlinePaymentNumber: String
+    val onlinePaymentNumber: String,
+    val ownerAddress: String = "" // Added new field with default value
 )

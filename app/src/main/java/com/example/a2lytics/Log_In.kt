@@ -5,9 +5,11 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.a2lytics.data.UserRole
 import com.example.a2lytics.databinding.ActivityLogInBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -29,7 +31,6 @@ class Log_In : AppCompatActivity() {
     private lateinit var password: String
     private lateinit var auth: FirebaseAuth
     private lateinit var googleSignInClient: GoogleSignInClient
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +76,42 @@ class Log_In : AppCompatActivity() {
         signUpButton.setOnClickListener {
             startActivity(Intent(this@Log_In, Sign_Up::class.java))
         }
+    }
+
+    private fun showRoleSelectionDialog(user: FirebaseUser) {
+        AlertDialog.Builder(this)
+            .setTitle("Select Your Role")
+            .setMessage("Are you a student or property owner?")
+            .setCancelable(false)
+            .setPositiveButton("Student") { _, _ ->
+                showRoleConfirmationDialog(user, true)
+            }
+            .setNegativeButton("Property Owner") { _, _ ->
+                showRoleConfirmationDialog(user, false)
+            }
+            .show()
+    }
+
+    private fun showRoleConfirmationDialog(user: FirebaseUser, isStudent: Boolean) {
+        val role = if (isStudent) "Student" else "Property Owner"
+        AlertDialog.Builder(this)
+            .setTitle("Confirm Your Role")
+            .setMessage("Are you sure you want to continue as a $role?")
+            .setCancelable(false)
+            .setPositiveButton("Yes") { _, _ ->
+                UserRole.setUserRole(this, isStudent)
+                navigateToMain()
+            }
+            .setNegativeButton("No") { _, _ ->
+                // If user cancels, show the role selection dialog again
+                showRoleSelectionDialog(user)
+            }
+            .show()
+    }
+
+    private fun navigateToMain() {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 
     private fun logIntoAccount(email: String, password: String) {
@@ -144,7 +181,8 @@ class Log_In : AppCompatActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        startActivity(Intent(this, MainActivity::class.java))
-        finish()
+        if (user != null) {
+            showRoleSelectionDialog(user)
+        }
     }
 }

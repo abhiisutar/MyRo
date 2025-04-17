@@ -11,6 +11,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.example.a2lytics.data.UserRole
 import com.example.a2lytics.databinding.ActivityMainBinding
 import com.example.a2lytics.drawer.AboutUs
 import com.example.a2lytics.drawer.Edit_Profile
@@ -22,24 +23,17 @@ import com.google.firebase.auth.FirebaseAuth
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
-
-
-    private lateinit var toggle : ActionBarDrawerToggle
-
-    private lateinit var  binding : ActivityMainBinding
-
-
+    private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        val drawerLayout : DrawerLayout = binding.main
+        val drawerLayout: DrawerLayout = binding.main
 
         // Set up NavController with NavHostFragment
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
@@ -48,16 +42,21 @@ class MainActivity : AppCompatActivity() {
         // Set up SmoothBottomBar with NavController
         binding.smoothBottomBar.setupWithNavController(navController)
 
+        // Hide Owner tab for students
+        if (UserRole.isStudent(this)) {
+            val menu = binding.smoothBottomBar.menu
+            menu.findItem(R.id.advanceFragment)?.isVisible = false
+        }
+
         // Set up notification icon click listener
         binding.notificationIcon.setOnClickListener {
-                val intent = Intent(this, NotificationsAndMessages::class.java)
-                startActivity(intent)
-            }
-
+            val intent = Intent(this, NotificationsAndMessages::class.java)
+            startActivity(intent)
+        }
 
         // Set up navigation drawer
         val humburgerButton = binding.humburgerButton
-        val navView : NavigationView = binding.navView
+        val navView: NavigationView = binding.navView
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
         drawerLayout.addDrawerListener(toggle)
@@ -76,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         val logOut = R.id.logOut
 
         navView.setNavigationItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
                 editProfile -> {
                     startActivity(Intent(this, Edit_Profile::class.java))
                 }
@@ -91,7 +90,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 logOut -> {
                     FirebaseAuth.getInstance().signOut()
-
                     startActivity(Intent(this, Log_In::class.java))
                     finish()
                 }
@@ -100,9 +98,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-   @Deprecated("Deprecated in Java")
+    @Deprecated("Deprecated in Java")
     override fun onBackPressed() { // Handle back button press for drawer layout
-        val drawerLayout : DrawerLayout = binding.main
+        val drawerLayout: DrawerLayout = binding.main
 
         if (drawerLayout.isDrawerOpen(binding.navView)) {
             drawerLayout.closeDrawer(binding.navView)
@@ -113,7 +111,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean { // Handle menu item selection
 
-        if(toggle.onOptionsItemSelected(item)){ // Handle toggle item selection
+        if (toggle.onOptionsItemSelected(item)) { // Handle toggle item selection
             return true
         }
 
@@ -121,7 +119,4 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-
-
 }

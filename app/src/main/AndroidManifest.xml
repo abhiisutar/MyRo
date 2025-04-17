@@ -14,6 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyRo"
         tools:targetApi="31">
+
+        <activity
+            android:name=".DetailScreen"
+            android:exported="false" />
         <activity
             android:name=".drawer.Settings"
             android:exported="false" />
@@ -47,6 +51,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".UpdatePropertyActivity"
+            android:exported="false" />
 
         <meta-data
             android:name="preloaded_fonts"

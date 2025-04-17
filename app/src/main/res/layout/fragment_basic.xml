@@ -9,17 +9,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      android:padding="16dp">
-
-    <Button
-        android:id="@+id/btn_landlord_room_info"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_blue_light"
-        android:padding="67dp"
-        android:text="Landlord &amp; Room Information"
-        app:cornerRadius="35dp"
-        app:icon="@drawable/home_icon" />
+      android:padding="8dp">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/propertyRecyclerView"
