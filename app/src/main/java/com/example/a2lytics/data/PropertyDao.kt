@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
+import androidx.room.Delete
 
 @Dao
 interface PropertyDao {
@@ -12,6 +13,9 @@ interface PropertyDao {
 
     @Update
     suspend fun updateProperty(property: PropertyEntity)
+
+    @Delete
+    suspend fun deleteProperty(property: PropertyEntity)
 
     @Query("SELECT * FROM rental_properties")
     suspend fun getAllProperties(): List<PropertyEntity>

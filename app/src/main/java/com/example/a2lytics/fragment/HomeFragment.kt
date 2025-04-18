@@ -44,6 +44,24 @@ class HomeFragment : Fragment() {
         // Get Current User ID
         val currentUserId = auth.currentUser?.uid
 
+        // Check if user is an owner
+        currentUserId?.let { uid ->
+            database.child("users").child(uid).child("role").addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val userRole = snapshot.getValue(String::class.java)
+                    if (userRole == "owner") {
+                        binding.putPropertyBtn.visibility = View.VISIBLE
+                    } else {
+                        binding.putPropertyBtn.visibility = View.GONE
+                    }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    binding.putPropertyBtn.visibility = View.GONE
+                }
+            })
+        }
+
         binding.searchRoomBtn.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_basicFragment)
         }

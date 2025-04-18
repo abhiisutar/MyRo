@@ -24,10 +24,9 @@ class Help : AppCompatActivity() {
             insets
         }
 
-        binding.backBtn.setOnClickListener {
-            finish()
+//        binding.backBtn.setOnClickListener {
+//            finish()
         }
 
 
     }
-}

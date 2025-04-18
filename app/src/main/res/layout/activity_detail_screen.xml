@@ -39,6 +39,18 @@
         android:visibility="gone"
         android:contentDescription="Edit Property"/>
 
+    <!-- Delete Button (Initially Invisible) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:visibility="gone"
+        android:backgroundTint="#FF0000"
+        android:contentDescription="Delete Property"/>
+
     <!-- Gender Icon with Decorative Container -->
     <FrameLayout
         android:layout_width="80dp"

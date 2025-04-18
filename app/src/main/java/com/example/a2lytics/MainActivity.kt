@@ -48,11 +48,6 @@ class MainActivity : AppCompatActivity() {
             menu.findItem(R.id.advanceFragment)?.isVisible = false
         }
 
-        // Set up notification icon click listener
-        binding.notificationIcon.setOnClickListener {
-            val intent = Intent(this, NotificationsAndMessages::class.java)
-            startActivity(intent)
-        }
 
         // Set up navigation drawer
         val humburgerButton = binding.humburgerButton

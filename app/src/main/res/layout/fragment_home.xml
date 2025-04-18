@@ -44,6 +44,7 @@
             android:layout_height="116dp"
             android:backgroundTint="#9F0F0F"
             android:text="PUT YOUR PROPERTY"
+            android:visibility="gone"
             app:cornerRadius="25dp"
             app:icon="@drawable/advance_icon"
             app:iconTint="#040000"

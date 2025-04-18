@@ -1,106 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-
-  <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/main"
-    android:background="@color/white"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".drawer.Help">
+    android:orientation="vertical"
+    android:background="#f8f0fb"
+    android:padding="16dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/card_background"
-        app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:text="Unlock Your Perfect Space"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#512da8"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#e1f5fe"
+        android:padding="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="6dp"
+        android:shadowColor="#b0bec5"
+        android:shadowRadius="4">
+
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#0961f5">
+            android:layout_height="wrap_content"
+            android:text="For Students/Tenants"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#00897b"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+
+                android:layout_marginRight="8dp"
+                app:tint="#00897b" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/alata"
-                android:text="@string/help"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:layout_marginStart="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/backBtn"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.26999998" />
+                android:text="1. Explore Rooms: Find your ideal space by searching for available rooms."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
 
-            <Button
-                android:id="@+id/backBtn"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:backgroundTint="#0961f5"
-                android:drawableTop="@drawable/back_icon"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
 
-            <Button
-                android:id="@+id/whatsappIcon"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/round_button"
-                android:drawableTop="@drawable/whatsapp_logo"
-                android:elevation="10dp"
-                android:padding="7dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_today"
+                android:layout_marginRight="8dp"
+                app:tint="#00897b" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Select &amp; Rent: Choose a room and initiate the rental process."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
 
-      <androidx.cardview.widget.CardView
-          android:layout_width="0dp"
-          android:layout_height="wrap_content"
-          android:layout_margin="16dp"
-          android:backgroundTint="#FFFFFF"
-          app:contentPaddingBottom="16dp"
-          app:cardCornerRadius="15dp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toBottomOf="@+id/cardView">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_call"
+                android:layout_marginRight="8dp"
+                app:tint="#00897b" />
 
-          <androidx.constraintlayout.widget.ConstraintLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Contact Owner: Get in touch with the property owner for details."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Abhii can't help because he's noob"
-                  app:layout_constraintBottom_toBottomOf="parent"
-                  app:layout_constraintEnd_toEndOf="parent"
-                  android:textSize="20.dp"
-                  app:layout_constraintStart_toStartOf="parent"
-                  app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
 
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_save"
+                android:layout_marginRight="8dp"
+                app:tint="#00897b" />
 
-          </androidx.constraintlayout.widget.ConstraintLayout>
-      </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Book Easily: Secure your room with a seamless booking process!"
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
-</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#f0f4c3"
+        android:padding="20dp"
+        android:elevation="6dp"
+        android:shadowColor="#b0bec5"
+        android:shadowRadius="4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For Owners/Landlords"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#d84315"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_marginRight="8dp"
+                app:tint="#d84315" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. List Property: Add your property to make it visible to students."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_marginRight="8dp"
+                app:tint="#d84315" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Add Details: Provide information like beds, rooms, and rent."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_upload"
+                android:layout_marginRight="8dp"
+                app:tint="#d84315" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Submit &amp; Rent: Publish your listing and put it up for rent."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:layout_marginRight="8dp"
+                app:tint="#d84315" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Manage Listings: Edit or delete your rooms as needed."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:layout_marginRight="8dp"
+                app:tint="#d84315" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Connect: Students will contact you directly through your listing."
+                android:textSize="16sp"
+                android:textColor="#424242" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

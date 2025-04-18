@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.a2lytics.data.PropertyDatabase
 import com.example.a2lytics.data.PropertyEntity
@@ -30,6 +31,7 @@ class DetailScreen : AppCompatActivity() {
     private lateinit var tvAddress: TextView
     private lateinit var ivGender: ImageView
     private lateinit var editFab: FloatingActionButton
+    private lateinit var deleteFab: FloatingActionButton
     private var currentProperty: PropertyEntity? = null
 
     private val updatePropertyLauncher = registerForActivityResult(
@@ -73,9 +75,10 @@ class DetailScreen : AppCompatActivity() {
         }
         ivGender.setImageResource(imageResource)
 
-        // Show edit button only for property owners
+        // Show edit and delete buttons only for property owners
         if (!UserRole.isStudent(this)) {
             editFab.visibility = View.VISIBLE
+            deleteFab.visibility = View.VISIBLE
         }
         
         loadPropertyDetails(propertyName)
@@ -96,6 +99,20 @@ class DetailScreen : AppCompatActivity() {
                     putExtra("ownerAddress", property.ownerAddress)
                 }
                 updatePropertyLauncher.launch(intent)
+            }
+        }
+
+        // Set up delete button click listener
+        deleteFab.setOnClickListener {
+            currentProperty?.let { property ->
+                AlertDialog.Builder(this)
+                    .setTitle("Delete Property")
+                    .setMessage("Are you sure you want to delete ${property.propertyName}? This action cannot be undone.")
+                    .setPositiveButton("Delete") { _, _ ->
+                        deleteProperty(property)
+                    }
+                    .setNegativeButton("Cancel", null)
+                    .show()
             }
         }
     }
@@ -124,6 +141,27 @@ class DetailScreen : AppCompatActivity() {
         }
     }
 
+    private fun deleteProperty(property: PropertyEntity) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                // Delete from Room database
+                PropertyDatabase.getDatabase(this@DetailScreen)
+                    .propertyDao()
+                    .deleteProperty(property)
+
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@DetailScreen, "Property deleted successfully", Toast.LENGTH_SHORT).show()
+                    setResult(RESULT_OK)
+                    finish()
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@DetailScreen, "Error deleting property: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
     private fun initializeViews() {
         try {
             tvPropertyName = findViewById(R.id.tvPropertyName)
@@ -136,6 +174,7 @@ class DetailScreen : AppCompatActivity() {
             tvAddress = findViewById(R.id.tvAddress)
             ivGender = findViewById(R.id.ivGender)
             editFab = findViewById(R.id.editFab)
+            deleteFab = findViewById(R.id.deleteFab)
         } catch (e: Exception) {
             Log.e("DetailScreen", "Error initializing views: ${e.message}", e)
             Toast.makeText(this, "Error initializing views", Toast.LENGTH_SHORT).show()
