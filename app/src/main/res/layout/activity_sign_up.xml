@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_signup_background2"
+    android:background="@drawable/student_going_clg"
     tools:context=".Sign_Up">
 
     <ImageView
@@ -15,10 +15,11 @@
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.22000003"
-        app:srcCompat="@drawable/myro_logo" />
+        app:layout_constraintVertical_bias="0.222"
+        app:srcCompat="@drawable/myro5" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -31,12 +32,13 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/alata"
         android:text="@string/sign_up_here"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textColor="#1D0202"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
@@ -44,18 +46,20 @@
         android:id="@+id/name_text"
         android:layout_width="300dp"
         android:layout_height="57dp"
+        android:layout_marginTop="12dp"
         android:autofillHints="name"
+        android:background="@drawable/rounded_edittext"
         android:drawableStart="@drawable/user_logo"
         android:drawablePadding="20dp"
         android:ems="10"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
         android:hint="@string/name"
         android:inputType="textPersonName"
+        android:padding="12dp"
         android:textColor="#000000"
         android:textColorHint="#444141"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -138,7 +142,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/yeon_sung"
         android:text="@string/continue_with"
-        android:textColor="#FFFFFF"
+        android:textColor="#101010"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="@+id/textView5"
@@ -170,12 +174,12 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:text="@string/already_have_an_account"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintHorizontal_bias="0.362"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createAccountBtn" />
 
@@ -199,16 +203,16 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signINBtn"
-        android:layout_width="70dp"
-        android:layout_height="16dp"
-        android:layout_marginTop="9dp"
+        android:layout_width="76dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="40dp"
         android:background="@android:color/transparent"
+        android:clickable="true"
+        android:focusable="true"
+        android:longClickable="false"
         android:paddingStart="3dp"
         android:paddingEnd="0dp"
         android:text="@string/sign_in"
-        android:longClickable="false"
-        android:clickable="true"
-        android:focusable="true"
         android:textAlignment="textStart"
         android:textColor="#1135FF"
         android:textStyle="bold"
