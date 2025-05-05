@@ -41,289 +41,130 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="16dp"
             app:cardBackgroundColor="@color/teal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="24dp">
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                <!-- Profile Photo - Enhanced with border -->
-                <androidx.cardview.widget.CardView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="50dp"
-                    android:layout_marginEnd="20dp"
-                    app:cardElevation="2dp">
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"/>
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/owner2"
-                        android:contentDescription="Profile photo"/>
-                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"/>
 
-                <!-- Name and Age - Better typography -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:id="@+id/tvName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Alex Johnson"
-                        android:textSize="24sp"
-                        android:textColor="#212121"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.02"/>
-
-                    <TextView
-                        android:id="@+id/tvAge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="24 years"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="8dp"/>
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvMobileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mobile"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Profile Details - Better organized with dividers -->
+        <!-- Address Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="@color/brown">
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingVertical="16dp">
-
-                <!-- College -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:paddingBottom="12dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="COLLEGE"
-                        android:textSize="12sp"
-                        android:textColor="@color/white"
-                        android:textAllCaps="true"
-                        android:letterSpacing="0.1"/>
-
-                    <TextView
-                        android:id="@+id/tvCollege"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="D Y PATIL TECHNICAL CAMPUS, TALSANDE"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="#EEEEEE"/>
-
-                <!-- Email -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp"
-                    android:paddingBottom="12dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="EMAIL"
-                        android:textSize="12sp"
-                        android:textColor="@color/white"
-                        android:textAllCaps="true"
-                        android:letterSpacing="0.1"/>
-
-                    <TextView
-                        android:id="@+id/tvEmail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="abhii.johnson@mit.edu"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="#EEEEEE"/>
-
-                <!-- Phone -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="16dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PHONE"
-                        android:textSize="12sp"
-                        android:textColor="@color/white"
-                        android:textAllCaps="true"
-                        android:letterSpacing="0.1"/>
-
-                    <TextView
-                        android:id="@+id/tvPhone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+91 932255-0123"
-                        android:textSize="16sp"
-                        android:textColor="@color/white"
-                        android:layout_marginTop="4dp"/>
-                </LinearLayout>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Bio Section - Improved readability -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="@color/purple">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="About Me"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:text="Address"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="16dp"/>
+                    android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/tvBio"
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Computer Science graduate student specializing in AI and Machine Learning. Passionate about building innovative mobile applications."
-                    android:textSize="15sp"
-                    android:textColor="@color/white"
-                    android:lineSpacingMultiplier="1.2"/>
+                    android:text="Address details"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Daily Diary Section - More polished input fields -->
+        <!-- Education Details Card -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="16dp"
-            app:cardElevation="2dp"
-            app:cardBackgroundColor="#E6C8C8">
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="24dp">
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Daily Journal"
-                    android:textSize="20sp"
-                    android:textColor="#212121"
+                    android:text="Education Details"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="24dp"/>
+                    android:textColor="@color/black"/>
 
-                <!-- Date Picker - Enhanced -->
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tvSchoolName"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
-                    app:boxCornerRadiusTopStart="8dp"
-                    app:boxCornerRadiusTopEnd="8dp"
-                    app:boxCornerRadiusBottomStart="8dp"
-                    app:boxCornerRadiusBottomEnd="8dp"
-                    app:hintTextColor="#9761DE"
-                    android:hint="Select Date">
+                    android:text="School Name"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etJournalDate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="date"
-                        android:textColor="#212121"/>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Diary Entry - Better text area -->
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/tvEducationBoard"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:boxCornerRadiusTopStart="8dp"
-                    app:boxCornerRadiusTopEnd="8dp"
-                    app:boxCornerRadiusBottomStart="8dp"
-                    app:boxCornerRadiusBottomEnd="8dp"
-                    app:hintTextColor="#6200EE"
-                    android:hint="Today's Thoughts">
+                    android:text="Education Board"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etJournalEntry"
-                        android:layout_width="match_parent"
-                        android:layout_height="150dp"
-                        android:gravity="top|start"
-                        android:inputType="textMultiLine"
-                        android:textColor="#212121"
-                        android:padding="12dp"/>
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <!-- Save Button - More prominent -->
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnSaveJournal"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginTop="24dp"
-                    android:text="SAVE ENTRY"
-                    android:textAllCaps="true"
-                    android:textColor="#FFFFFF"
-                    android:textSize="14sp"
-                    app:cornerRadius="24dp"
-                    app:backgroundTint="#6200EE"
-                    app:iconTint="#FFFFFF"
-                    app:iconGravity="textStart"
-                    app:iconPadding="8dp"/>
+                <TextView
+                    android:id="@+id/tvClass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Class"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

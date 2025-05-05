@@ -4,139 +4,190 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal"
+    android:background="#54ABA2"
     tools:context=".fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- App Logo/Title -->
+
+        <!-- Bottom Navigation Buttons -->
+
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome to MyRO!"
-            android:textColor="#FFFFFF"
-            android:textSize="28sp"
-            android:textStyle="bold"
+            android:layout_width="289dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="51dp"
             android:shadowColor="#80000000"
             android:shadowDx="2"
             android:shadowDy="2"
             android:shadowRadius="4"
-            app:layout_constraintBottom_toTopOf="@+id/searchRoomBtn"
+            android:text="Welcome to MyRO!"
+            android:textColor="#FFFFFF"
+
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/horizontalScrollView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintVertical_bias="0.0" />
 
-        <!-- Main Action Button -->
-
-        <!-- Secondary Action Button -->
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/searchRoomBtn"
-            android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="248dp"
-            android:layout_marginEnd="32dp"
-            android:backgroundTint="#D32F2F"
-            android:elevation="8dp"
-            android:text="SEARCH FOR A ROOM"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            app:cornerRadius="24dp"
-            app:icon="@drawable/basic_icon"
-            app:iconGravity="textStart"
-            app:iconPadding="16dp"
-            app:iconTint="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:rippleColor="#B71C1C"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="1dp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/putPropertyBtn"
-            android:layout_width="0dp"
-            android:layout_height="120dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="32dp"
-            android:backgroundTint="#F44336"
-            android:elevation="8dp"
-            android:text="PUT YOUR PROPERTY"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:visibility="gone"
-            app:cornerRadius="24dp"
-            app:icon="@drawable/advance_icon"
-            app:iconGravity="textStart"
-            app:iconPadding="16dp"
-            app:iconTint="#FFFFFF"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchRoomBtn"
-            app:rippleColor="#D32F2F"
-            app:strokeColor="#FFFFFF"
-            app:strokeWidth="1dp" />
-
-        <!-- Bottom Navigation Buttons -->
-        <LinearLayout
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
-            android:orientation="horizontal"
-            android:weightSum="3"
+            android:layout_marginBottom="114dp"
+            android:clipToPadding="false"
+            android:paddingVertical="8dp"
+            android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            tools:ignore="MissingConstraints">
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="#4CAF50"
-                android:text="About App"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="16dp"
+                android:orientation="horizontal"
+                android:padding="24dp">
 
-                app:iconGravity="textStart"
-                app:iconTint="#FFFFFF" />
+                <!-- Card 1: About the App -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="280dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/purple"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="#2196F3"
-                android:text="Help"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="16dp"
+                    <LinearLayout
+                        android:layout_width="255dp"
+                        android:layout_height="288dp"
+                        android:orientation="vertical"
+                        android:padding="24dp">
 
-                app:iconGravity="textStart"
-                app:iconTint="#FFFFFF" />
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/myro3"
+                            android:contentDescription="About icon"
+                            app:tint="@color/white" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="#9C27B0"
-                android:text="Profile"
-                android:textColor="#FFFFFF"
-                app:cornerRadius="16dp"
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="About MyRo"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
 
-                app:iconGravity="textStart"
-                app:iconTint="#FFFFFF" />
-        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="6dp"
+                            android:text="MyRo is a student-focused platform connecting renters with affordable, quality accommodations near campuses nationwide."
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
 
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 2: How to Use -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="280dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/teal"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/help_icon"
+                            android:contentDescription="How to use icon"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="How to Use"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="6dp"
+                            android:text="1. Search for locations\n2. View room details\n3. Book instantly\n4. Move in hassle-free"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 3: Our Goals -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="280dp"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="8dp"
+                    app:cardBackgroundColor="@color/blue"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/student"
+                            android:contentDescription="Mission icon"
+                            app:tint="@color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="Our Mission"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="6dp"
+                            android:text="We aim to simplify student housing by providing verified listings, transparent pricing, and a seamless booking experience."
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
