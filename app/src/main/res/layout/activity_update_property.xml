@@ -56,7 +56,7 @@
                 android:id="@+id/numberOfRoomsEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Number of Rooms"
+                android:hint="Total number of beds"
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,7 +70,7 @@
                 android:id="@+id/bedsPerRoomEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Beds per Room"
+                android:hint="Available beds"
                 android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 

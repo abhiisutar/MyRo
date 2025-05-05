@@ -8,13 +8,19 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/myro_logo"
+        android:icon="@drawable/myro3"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/myro_logo"
+        android:roundIcon="@drawable/myro3"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyRo"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false"
+            android:theme="@style/Theme.MyRo" />
+        <activity
+            android:name=".aboutApp"
+            android:exported="false" />
         <activity
             android:name=".DetailScreen"
             android:exported="false" />

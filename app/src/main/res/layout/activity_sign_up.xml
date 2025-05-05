@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="118dp" />
+        app:layout_constraintGuide_begin="104dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -42,11 +42,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
+
     <EditText
         android:id="@+id/name_text"
         android:layout_width="300dp"
         android:layout_height="57dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="52dp"
         android:autofillHints="name"
         android:background="@drawable/rounded_edittext"
         android:drawableStart="@drawable/user_logo"
@@ -67,72 +68,54 @@
         android:id="@+id/email_text"
         android:layout_width="300dp"
         android:layout_height="57dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="emailAddress"
+        android:background="@drawable/rounded_edittext"
         android:drawableStart="@drawable/mail_logo"
         android:drawablePadding="15dp"
         android:ems="10"
         android:hint="@string/email"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
         android:inputType="textEmailAddress"
+        android:padding="12dp"
         android:textColor="#000000"
         android:textColorHint="#444141"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_text" />
-
-    <EditText
-        android:id="@+id/phone_text"
-        android:layout_width="300dp"
-        android:layout_height="57dp"
-        android:autofillHints="phone"
-        android:drawableStart="@drawable/phone_icon"
-        android:layout_marginTop="8dp"
-        android:drawablePadding="15dp"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
-        android:ems="10"
-        android:hint="@string/phone_no"
-        android:inputType="phone"
-        android:textColor="#000000"
-        android:textColorHint="#444141"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_text" />
 
     <EditText
         android:id="@+id/password_text"
         android:layout_width="300dp"
         android:layout_height="57dp"
         android:autofillHints="password"
+        android:background="@drawable/rounded_edittext"
         android:drawableStart="@drawable/password_logo"
-        android:layout_marginTop="8dp"
         android:drawablePadding="15dp"
         android:ems="10"
-        android:background="@drawable/rounded_edittext"
-        android:padding="12dp"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:padding="12dp"
         android:textColor="#000000"
         android:textColorHint="#444141"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/email_text"
         app:layout_constraintStart_toStartOf="@+id/email_text"
-        app:layout_constraintTop_toBottomOf="@+id/phone_text" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="25dp"
+        android:layout_height="19dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/yeon_sung"
         android:text="@string/or"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/password_text"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="@+id/password_text"
         app:layout_constraintTop_toBottomOf="@+id/password_text" />
 
@@ -140,11 +123,13 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/yeon_sung"
         android:text="@string/continue_with"
         android:textColor="#101010"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -152,7 +137,7 @@
         android:id="@+id/googleBtn"
         android:layout_width="152dp"
         android:layout_height="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_bg"
         android:drawableStart="@drawable/google_logo"
         android:drawablePadding="15dp"
@@ -167,6 +152,7 @@
         android:textSize="18sp"
         app:iconPadding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -187,7 +173,7 @@
         android:id="@+id/createAccountBtn"
         android:layout_width="280dp"
         android:layout_height="57dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/login_signup_btn"
         android:elevation="16dp"
         android:fontFamily="@font/artifika"
@@ -197,15 +183,16 @@
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/googleBtn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signINBtn"
-        android:layout_width="76dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="75dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:background="@android:color/transparent"
         android:clickable="true"
         android:focusable="true"
