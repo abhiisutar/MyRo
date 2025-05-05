@@ -184,7 +184,7 @@ class DetailScreen : AppCompatActivity() {
 
     private fun showPropertyCard(property: PropertyEntity) {
         try {
-            val totalBeds = property.numberOfRooms * property.bedsPerRoom
+            val totalBeds = property.numberOfRooms
             
             tvTotalBeds.text = totalBeds.toString()
             tvAvailableBeds.text = "${property.bedsPerRoom}"
