@@ -23,3 +23,16 @@ interface PropertyDao {
     @Query("SELECT * FROM rental_properties WHERE propertyName = :name LIMIT 1")
     suspend fun getPropertyByName(name: String): PropertyEntity?
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

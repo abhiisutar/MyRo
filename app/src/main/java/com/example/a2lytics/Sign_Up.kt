@@ -32,7 +32,7 @@ class Sign_Up : AppCompatActivity() {
     private lateinit var email: String
     private lateinit var password: String
     private lateinit var userName: String
-    private lateinit var phoneNo: String
+
 
     private lateinit var auth: FirebaseAuth
     private lateinit var dataBase: DatabaseReference
@@ -70,10 +70,10 @@ class Sign_Up : AppCompatActivity() {
             email = binding.emailText.text.toString().trim()
             password = binding.passwordText.text.toString().trim()
             userName = binding.nameText.text.toString().trim()
-            phoneNo = binding.phoneText.text.toString().trim()
+
 
             // Validate input fields
-            if (email.isBlank() || userName.isBlank() || password.isBlank() || phoneNo.isBlank()) {
+            if (email.isBlank() || userName.isBlank() || password.isBlank() ) {
                 Toast.makeText(this, "Please fill all details", Toast.LENGTH_SHORT).show()
             } else {
                 createAccount(email, password)
@@ -109,7 +109,7 @@ class Sign_Up : AppCompatActivity() {
             email = email,
             password = password,
             userName = userName,
-            phoneNo = phoneNo
+
         )
         val userId = auth.currentUser!!.uid
         dataBase.child("users").child(userId).setValue(user)
@@ -144,7 +144,7 @@ class Sign_Up : AppCompatActivity() {
         val userModel = UserModel(
             email = user.email ?: "",
             userName = user.displayName ?: "",
-            phoneNo = user.phoneNumber ?: ""
+
         )
         val userId = user.uid
         dataBase.child("users").child(userId).setValue(userModel)
